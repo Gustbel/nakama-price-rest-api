@@ -3,10 +3,10 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { getSinglePriceResponse } from '../../src/scripts/getResponses';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const { address } = req.query;
+  const { addresses } = req.query;
 
   try {
-    const response = await getSinglePriceResponse(address)
+    const response = await getSinglePriceResponse(addresses)
 
     res.status(200).json(response);
   } catch (error) {

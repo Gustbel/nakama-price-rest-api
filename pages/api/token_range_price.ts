@@ -6,7 +6,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { address, from, to } = req.query;
 
   try {
-    const response = await getRangePriceResponse(address)
+    const response = await getRangePriceResponse(address, from, to)
 
     res.status(200).json(response);
   } catch (error) {
