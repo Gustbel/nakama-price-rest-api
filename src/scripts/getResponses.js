@@ -1,8 +1,8 @@
 const axios = require('axios');
-const fs = require('fs');
-const { getWhitelistPrice } = require('./fetcherPrices/whitelistPrices.js');
 
-const whitelist = JSON.parse(fs.readFileSync('whitelist.json', 'utf8'));
+const { getWhitelistPrice } = require('./fetcherPrices/whitelistPrices.js');
+const { whitelist } = require('../whitelist.js');
+
 
 async function getSinglePriceResponse(addresses) {
     let response = {}; 
