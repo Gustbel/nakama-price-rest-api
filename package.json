@@ -1,5 +1,5 @@
 {
-  "name": "nakama-price-api2",
+  "name": "nakama-price-rest-api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
